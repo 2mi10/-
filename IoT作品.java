@@ -1,3 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スマート時計トップページ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0078d7;
+            color: white;
+            padding: 20px 0;
+        }
+        main {
+            padding: 20px;
+        }
+        .button {
+            display: block;
+            margin: 10px auto;
+            padding: 15px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #0078d7;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 80%;
+            max-width: 300px;
+        }
+        .button:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>スマート時計</h1>
+        <p>デバイスの向きで機能が切り替わります</p>
+    </header>
+    <main>
+        <h2>現在の機能</h2>
+        <p id="currentFunction">未検出</p>
+        <button class="button" onclick="testGyro()">センサーをテスト</button>
+    </main>
+    <script>
+        // 現在の機能を表示する処理
+        function displayFunction(functionName) {
+            document.getElementById("currentFunction").innerText = functionName;
+        }
+
+        // ジャイロセンサーのテスト関数
+        function testGyro() {
+            if (window.DeviceOrientationEvent) {
+                alert("デバイスがセンサーをサポートしています。");
+            } else {
+                alert("このデバイスはセンサーをサポートしていません。");
+            }
+        }
+
+
+
 // ジャイロセンサーのデータを取得するイベントリスナー
 if (window.DeviceOrientationEvent) {
     window.addEventListener("deviceorientation", function(event) {
