@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>スマート時計トップページ</title>
+    <title>マルチアングルクロック</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -40,7 +40,7 @@
 </head>
 <body>
     <header>
-        <h1>スマート時計</h1>
+        <h1>マルチアングルクロック</h1>
         <p>デバイスの向きで機能が切り替わります</p>
     </header>
     <main>
